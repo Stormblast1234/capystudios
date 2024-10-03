@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Con Capy - Colorear y Figuras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Encabezado y navegación -->
+    <header class="bg-info py-3">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <a href="INDEX.html" class="navbar-brand text-white fs-3">Aprende Con Capy</a>
+            <ul class="nav d-none d-md-flex">
+                <li class="nav-item"><a href="INDEX.html" class="nav-link text-white">Inicio</a></li>
+                <li class="nav-item"><a href="https://google.com" class="nav-link text-white">Cuentos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">8-12 años</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Contacto</a></li>
+                <li class="nav-item"><a href="FORMULARIO.html" class="nav-link text-white">Formulario</a></li>
+                <li class="nav-item"><a href="LOGIN.html" class="btn btn-warning">Login</a></li>
+            </ul>
+            <!-- Botón del menú hamburguesa para dispositivos móviles -->
+            <input type="checkbox" id="menu-toggle" class="d-md-none">
+            <label for="menu-toggle" class="menu-icon">
+                <img src="images/menu.png" alt="Icono de menú" width="30" height="30">
+            </label>
+        </nav>
+
+        <!-- Menú responsive -->
+        <ul class="nav flex-column d-md-none text-center bg-info">
+            <li class="nav-item"><a href="INDEX.html" class="nav-link text-white">Inicio</a></li>
+            <li class="nav-item"><a href="https://google.com" class="nav-link text-white">Cuentos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">8-12 años</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Contacto</a></li>
+            <li class="nav-item"><a href="FORMULARIO.html" class="nav-link text-white">Formulario</a></li>
+            <li class="nav-item"><a href="LOGIN.html" class="btn btn-warning">Login</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1 id="head" class="text-center my-4">Juegos de colores</h1>
+
+        <div class="da-carousel">
+            <div class="gallery-item">
+                <a href="Juegos-matemáticas.html" title="Juegos de matemáticas">
+                    <img src="images/MATEMÁTICAS.jpg" alt="Juegos de matemáticas" width="80" height="85">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="Juegos-letras.html" title="Juegos de letras">
+                    <img src="images/LETRAS.jpg" alt="Juegos de letras" width="80" height="85">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="Juegos-colorear.html" title="Juegos de colorear">
+                    <img src="images/COLOREAR.jpg" alt="Juegos de colorear" width="80" height="85">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="Juegos-música.html" title="Juegos de música">
+                    <img src="images/MÚSICA.jpg" alt="Juegos de música" width="80" height="85">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="Juegos-memoria.html" title="Juegos de memoria">
+                    <img src="images/MEMORIA.jpg" alt="Juegos de memoria" width="80" height="85">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="Juegos-Puzzles.html" title="Juegos de Puzzles">
+                    <img src="images/PUZZLES.jpg" alt="Juegos de Puzzles" width="80" height="85">
+                </a>
+            </div>
+        </div>
+
+    <main class="container mt-5">
+        <h1 id="head" class="text-center">¡Aprende los Colores y las Figuras Geométricas!</h1>
+
+        <!-- Juego 1: Identificación de Colores -->
+        <section class="text-center my-5">
+            <h2>Juego 1: Identifica el color (Español e Inglés)</h2>
+            <div id="colorDisplay" style="width: 100px; height: 100px; margin: 0 auto; border: 1px solid black;"></div>
+            <p id="colorName" class="mt-3"></p>
+            <button onclick="showColor()">Mostrar Color</button>
+            <button onclick="showAnswer()">Ver Respuesta</button>
+        </section>
+
+        <!-- Juego 2: Pintar Figuras Geométricas -->
+        <section class="text-center my-5">
+            <h2>Juego 2: Pinta una figura geométrica</h2>
+            <canvas id="shapeCanvas" width="200" height="200" style="border:1px solid #000;"></canvas><br>
+            <label for="shapeColorPicker">Elige un color: </label>
+            <input type="color" id="shapeColorPicker" value="#ff0000">
+            <button onclick="drawShape()">Dibujar Figura</button>
+        </section>
+
+        <!-- Juego 3: Completa la Secuencia de Colores -->
+        <section class="text-center my-5">
+            <h2>Juego 3: Completa la secuencia de colores</h2>
+            <div id="colorSequence"></div>
+            <input type="text" id="colorInput" placeholder="Escribe el color en inglés">
+            <button onclick="checkSequence()">Comprobar</button>
+            <p id="sequenceResult" class="mt-3"></p>
+        </section>
+
+    </main>
+
+    <footer class="bg-info text-white text-center py-3 mt-5">
+        <p>© 2023 Página para niños. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Juego 1: Identificación de Colores en español e inglés
+        const colors = [
+            { spanish: "Rojo", english: "Red", color: "#ff0000" },
+            { spanish: "Verde", english: "Green", color: "#00ff00" },
+            { spanish: "Azul", english: "Blue", color: "#0000ff" },
+            { spanish: "Amarillo", english: "Yellow", color: "#ffff00" },
+            { spanish: "Naranja", english: "Orange", color: "#ff9900" }
+        ];
+
+        let currentColor = null;
+
+        function showColor() {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            currentColor = colors[randomIndex];
+            document.getElementById('colorDisplay').style.backgroundColor = currentColor.color;
+            document.getElementById('colorName').innerText = "¿Cuál es este color?";
+        }
+
+        function showAnswer() {
+            if (currentColor) {
+                document.getElementById('colorName').innerText = `${currentColor.spanish} (Inglés: ${currentColor.english})`;
+            }
+        }
+
+        // Juego 2: Pintar Figuras Geométricas
+        const shapeCanvas = document.getElementById('shapeCanvas');
+        const shapeCtx = shapeCanvas.getContext('2d');
+        const shapeColorPicker = document.getElementById('shapeColorPicker');
+
+        function drawShape() {
+            shapeCtx.clearRect(0, 0, shapeCanvas.width, shapeCanvas.height); // Limpiar lienzo
+            shapeCtx.fillStyle = shapeColorPicker.value;
+
+            // Dibujar una figura geométrica simple (círculo)
+            shapeCtx.beginPath();
+            shapeCtx.arc(100, 100, 50, 0, 2 * Math.PI);
+            shapeCtx.fill();
+        }
+
+        // Juego 3: Completa la Secuencia de Colores
+        const sequence = ["Red", "Green", "Blue", "Yellow"];
+        let currentStep = 0;
+
+        function displaySequence() {
+            const displayDiv = document.getElementById('colorSequence');
+            displayDiv.innerHTML = "Secuencia: ";
+            sequence.forEach(color => {
+                const colorSpan = document.createElement('span');
+                colorSpan.innerText = `${color} `;
+                colorSpan.style.color = color.toLowerCase();
+                displayDiv.appendChild(colorSpan);
+            });
+        }
+
+        function checkSequence() {
+            const userInput = document.getElementById('colorInput').value;
+            if (userInput.toLowerCase() === sequence[currentStep].toLowerCase()) {
+                currentStep++;
+                document.getElementById('sequenceResult').innerText = "¡Correcto!";
+                if (currentStep === sequence.length) {
+                    document.getElementById('sequenceResult').innerText = "¡Secuencia completa!";
+                    currentStep = 0; // Reiniciar secuencia
+                }
+            } else {
+                document.getElementById('sequenceResult').innerText = "Incorrecto, inténtalo de nuevo.";
+            }
+        }
+
+        // Inicializar secuencia
+        displaySequence();
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,57 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff;
+}
+
+h1, h2 {
+    color: #ff69b4;
+}
+
+p {
+    color: #333;
+}
+
+.nav-link {
+    font-size: 1.2em;
+    color: #fff !important;
+}
+
+.nav-link:hover {
+    color: #ff69b4 !important;
+}
+
+.btn-warning {
+    background-color: #ff6347;
+    border-color: #ff6347;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background-color: #ffa07a;
+    border-color: #ffa07a;
+}
+
+.da-carousel .gallery-item img {
+    border: 5px solid #ff69b4;
+    border-radius: 15px;
+}
+
+.aviso-cookies {
+    background-color: #ffdab9;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.1em;
+    color: #8b4513;
+}
+
+.boton {
+    background-color: #ff69b4;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #ff1493;
+}

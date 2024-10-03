@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Autenticación con Firebase IE RINCON SANTO</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <nav class="navbar navbar--sticky">
+    <ul class="navbar-list">
+      <li class="navbar-item">
+        <a
+          class="navbar-link"
+          target="_blank"
+          href="https://firebase.google.com/"
+        >
+          Tema de clase Firebase para Web IE RINCON SANTO
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a
+          class="navbar-link"
+          target="_blank"
+          style="--navbarLinkIcon: url(../images/github_favicon.png);"
+          href="https://firebase.google.com/docs?hl=es-419"
+        >
+        Documentación de Firebase
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main role="application">
+    <header class="hero">
+      <article class="hero-info">
+        <h1 class="hero-title">
+          SERVICIO NACIONAL DE APRENDIZAJE SENA 😎✌
+        </h1>
+        <p class="hero-description">
+          En este ejercicio del curso de Firebase para la Web, organizado por el SENA y el IE Rincón Santo, se ha desarrollado una aplicación web sencilla que permite a los usuarios autenticarse utilizando diferentes métodos: correo electrónico y contraseña, Google, Facebook y X.        </p>
+        
+      </article>
+    </header>
+
+    <section class="appInfo">
+      <article class="privateInfo">
+        <h2 class="privateInfo-title">Información exclusiva para usuarios de la plataforma  🤐</h2>
+        
+        <div id="loginFormUI" class="form-container">
+          <p>Por favor, inicia sesión para mostrar tu información 🖖...</p>
+
+          <form class="loginForm" name="loginForm">
+            <input
+              class="input"
+              type="email"
+              name="email"
+              placeholder="Correo Electronico"
+              required
+            />
+            <input
+              class="input"
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+              required
+            />
+
+            <div class="form-radioContainer">
+              <input type="radio" name="isLoginOrSignup" id="radioIsLogin" value="isLogin" checked />
+              <label for="radioIsLogin">Ingresa</label>
+
+              <input type="radio" name="isLoginOrSignup" id="radioIsSignup" value="isSignup" />
+              <label for="radioIsSignup">Registrate</label>
+            </div>
+
+            <button id="btnLogin" class="button">Clic</button>
+          </form>
+        </div>
+
+        <div id="hiddenPrivateInfo">
+          <p class="loading">Cargando...</p>
+        </div>
+      </article>
+      
+      <article class="publicInfo">
+        <h2 class="privateInfo-title">Información General 📝</h2>
+      
+        <p>Contenido público</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        ¡La comunidad SENA de programadores es una familia!  ‍‍‍ Juntos pueden lograr grandes cosas.  Compartan sus conocimientos , colaboren en proyectos , y ayúdense mutuamente a crecer .  Recuerden que en la programación, el aprendizaje es continuo  y cada línea de código es un paso hacia el éxito .  ¡No duden en preguntar ❓, en buscar ayuda 🆘 y en compartir sus ideas !  #SENA #ComunidadDeProgramadores #TrabajoEnEquipo
+      </p>
+      
+
+    
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

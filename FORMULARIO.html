@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>formulario</title>
+    <link rel="stylesheet" href="Stylef.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header class="bg-info py-3">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <a href="INDEX.html" class="navbar-brand text-white fs-3">Aprende Con Capy</a>
+            <ul class="nav">
+                <li class="nav-item"><a href="INDEX.html" class="nav-link text-white">Inicio</a></li>
+                <li class="nav-item"><a href="https://google.com" class="nav-link text-white">Cuentos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">8-12 años</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Contacto</a></li>
+                <li class="nav-item"><a href="FORMULARIO.html" class="nav-link text-white">Formulario</a></li>
+                <li class="nav-item"><a href="LOGIN.html" class="btn btn-warning">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+    <h2>Registro</h2>
+<form action="https://formspree.io/f/meqywreo" method="post">
+
+    <div class="form-group">
+        <label for="nombre">Nombres</label>
+        <input class="controls" type="text" placeholder="Ingresa tu nombre" id="nombre" name="nombre" required>
+    </div>
+
+    <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input class="controls" type="text" placeholder="Ingresa tus apellidos" id="apellidos" name="apellidos" required>
+    </div>
+
+    <div class="form-group">
+        <label for="correo electrónico">Correo electrónico</label>
+        <input class="controls" type="email" placeholder="Ingresa tu correo" id="correo electronico" name="correo electronico" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Opciones">Selecciona tu rol</label>
+        <select class="controls" id="Opciones" name="Opciones[]" required>
+            <option class="Elige" aria-placeholder="Elige tu rol" value="Ninguno"></option>
+            <option value="Aprendiz SENA">Aprendiz SENA</option>
+            <option value="Intructor SENA">Instructor SENA</option>
+            <option value="Docente">Docente</option>
+            <option value="Directivo docente">Directivo docente</option>
+            <option value="Directivo SENA">Directivo SENA</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="direccion">Ingresa tu mensaje</label>
+        <textarea class="controls" id="mensaje" name="mensaje" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los terminos y condiciones</label>
+    </div>
+
+    <button class="buttons" type="submit">Enviar información</button>
+    <button class="buttons" id="end"><a href="INDEX.html">Regresar</a></button>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body{
+    height: 160vh;
+    position: relative;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url(FONDO.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F2F2F2;
+}
+
+.container{
+    max-width: 500px;
+    margin: 50px auto;
+    background: #4e4d4d;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 40px;
+    border-radius: 8px;
+    color: white;
+}
+
+.controls {
+    color: white;
+    width: 100%;
+    border: 1px solid #017bab;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    background: #017bab;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#end a{
+    color: white;
+}
+
+#end a:link{
+    color: black;
+}
+
+.buttons:hover{
+    background-color: #4e4d4d;
+    border: 2px white solid;
+}
+
+h2{text-align: center;}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select{
+    width: 100%;
+    padding: 10px;
+    border: 1 solid black;
+}
+
+button:hover{
+    background-color: #4e4d4d;
+    border: 2px white;
+}
+
+input [type="checkbox"]{
+    margin-right: 10px;
+}
+
+.error-message{
+    color: darkgreen;
+    font-size: 14px;
+}
